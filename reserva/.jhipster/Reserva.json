@@ -1,0 +1,42 @@
+{
+  "applications": "*",
+  "changelogDate": "20221117052850",
+  "clientRootFolder": "reserva",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "reserva",
+  "fields": [
+    {
+      "fieldName": "fechaInicio",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "fechaFin",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "reserva",
+  "name": "Reserva",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "habitacion",
+      "otherEntityRelationshipName": "reserva",
+      "relationshipName": "idHabitacion",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "usuario",
+      "otherEntityRelationshipName": "reserva",
+      "relationshipName": "nroDoc",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

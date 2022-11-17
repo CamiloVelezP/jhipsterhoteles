@@ -2,7 +2,6 @@ package com.arquisocios.reserva;
 
 import com.arquisocios.reserva.ReservaApp;
 import com.arquisocios.reserva.config.AsyncSyncConfiguration;
-import com.arquisocios.reserva.config.EmbeddedElasticsearch;
 import com.arquisocios.reserva.config.EmbeddedSQL;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -17,7 +16,6 @@ import org.springframework.test.annotation.DirtiesContext;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @SpringBootTest(classes = { ReservaApp.class, AsyncSyncConfiguration.class })
-@EmbeddedElasticsearch
 @EmbeddedSQL
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)
 public @interface IntegrationTest {

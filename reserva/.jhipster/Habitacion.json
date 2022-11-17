@@ -1,0 +1,52 @@
+{
+  "applications": "*",
+  "changelogDate": "20221117052852",
+  "clientRootFolder": "reserva",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "habitacion",
+  "fields": [
+    {
+      "fieldName": "ubicacion",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "capacidad",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "precio",
+      "fieldType": "Float",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "disponible",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "reserva",
+  "name": "Habitacion",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "reserva",
+      "otherEntityRelationshipName": "idHabitacion",
+      "relationshipName": "reserva",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "hotel",
+      "otherEntityRelationshipName": "habitacion",
+      "relationshipName": "idHotel",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

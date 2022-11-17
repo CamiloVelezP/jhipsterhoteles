@@ -108,6 +108,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.jboss.xnio</groupId>
+            <artifactId>xnio-api</artifactId>
+            <version>3.3.8.Final</version>
+        </dependency>
+        <dependency>
             <groupId>tech.jhipster</groupId>
             <artifactId>jhipster-framework</artifactId>
             <exclusions>
@@ -1308,7 +1313,7 @@
                 <!-- The following dependency is added due to issue #9175-->
                 <dependency>
                     <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-undertow</artifactId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
                 </dependency>
             </dependencies>
             <build>
