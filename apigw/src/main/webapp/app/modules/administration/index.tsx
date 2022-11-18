@@ -9,6 +9,10 @@ import Metrics from './metrics/metrics';
 import Configuration from './configuration/configuration';
 import Docs from './docs/docs';
 import Gateway from './gateway/gateway';
+import Habitacion from './habitacion'
+import Hotel from './hotel';
+import Usuario from './usuario';
+
 
 const AdministrationRoutes = () => (
   <div>
@@ -20,6 +24,9 @@ const AdministrationRoutes = () => (
       <Route path="configuration" element={<Configuration />} />
       <Route path="logs" element={<Logs />} />
       <Route path="docs" element={<Docs />} />
+      <Route path="habitacion/*" element={<Habitacion />} />
+      <Route path="hotel/*" element={<Hotel />} />
+      <Route path="usuario/*" element={<Usuario />} />
     </ErrorBoundaryRoutes>
   </div>
 );
